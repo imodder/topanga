@@ -263,7 +263,7 @@ kern_return_t unpack_bootstrap() {
     NSString *bootstrap_2_path = [execpath stringByAppendingPathComponent:@"bootstrap_2.tar"];
     
     BOOL should_install_cydia = !([[NSFileManager defaultManager] fileExistsAtPath:@"/Applications/Cydia.app"]);
-    if(should_install_cydia != YES) {
+    if(should_install_cydia == YES) {
 
         chdir("/");
         FILE *bootstrap = fopen([bootstrap_path UTF8String], "r");
